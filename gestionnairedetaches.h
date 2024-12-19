@@ -1,6 +1,8 @@
 #ifndef GESTIONNAIREDETACHES_H
 #define GESTIONNAIREDETACHES_H
 
+#include "taskmanager.h"
+#include "taskview.h"
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -19,5 +21,7 @@ public:
 
 private:
     Ui::GestionnaireDeTaches *ui;
+    TaskManager *taskManager;
+    TaskView *taskView;
 };
 #endif // GESTIONNAIREDETACHES_H

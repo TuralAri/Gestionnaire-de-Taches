@@ -10,11 +10,17 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    gestionnairedetaches.cpp
+    gestionnairedetaches.cpp \
+    task.cpp \
+    taskmanager.cpp \
+    taskview.cpp
 
 HEADERS += \
     gestionnairedetaches.h \
-    observers.h
+    observers.h \
+    task.h \
+    taskmanager.h \
+    taskview.h
 
 FORMS += \
     gestionnairedetaches.ui
