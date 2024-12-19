@@ -10,13 +10,13 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    gestionnairedetaches.cpp
 
 HEADERS += \
-    mainwindow.h
+    gestionnairedetaches.h
 
 FORMS += \
-    mainwindow.ui
+    gestionnairedetaches.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
