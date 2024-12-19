@@ -13,7 +13,8 @@ SOURCES += \
     gestionnairedetaches.cpp
 
 HEADERS += \
-    gestionnairedetaches.h
+    gestionnairedetaches.h \
+    observers.h
 
 FORMS += \
     gestionnairedetaches.ui
