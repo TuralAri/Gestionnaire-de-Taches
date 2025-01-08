@@ -74,8 +74,12 @@
         <number>0</number>
        </property>
        <item>
-        <widget class="QWidget" name="widget" native="true">
-         <layout class="QVBoxLayout" name="verticalLayout_2"/>
+        <widget class="QWidget" name="calendarWidget" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QCalendarWidget" name="calendarWidget_2"/>
+          </item>
+         </layout>
         </widget>
        </item>
       </layout>
@@ -93,9 +97,9 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
-   <addaction name="actionImport_Json_File"/>
+   <addaction name="actionAdd_Task"/>
   </widget>
-  <action name="actionImport_Json_File">
+  <action name="actionAdd_Task">
    <property name="text">
     <string>Ajouter une Tâche</string>
    </property>

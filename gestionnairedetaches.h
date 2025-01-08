@@ -1,6 +1,8 @@
 #ifndef GESTIONNAIREDETACHES_H
 #define GESTIONNAIREDETACHES_H
 
+#include "calendarview.h"
+#include "deletetaskcontroller.h"
 #include "taskmanager.h"
 #include "taskview.h"
 #include <QMainWindow>
@@ -18,10 +20,15 @@ class GestionnaireDeTaches : public QMainWindow
 public:
     GestionnaireDeTaches(QWidget *parent = nullptr);
     ~GestionnaireDeTaches();
+    Ui::GestionnaireDeTaches getUI();
 
 private:
     Ui::GestionnaireDeTaches *ui;
     TaskManager *taskManager;
     TaskView *taskView;
+    CalendarView *calendarView;
+    DeleteTaskController* deleteTaskController;
+    void removeTask();
+    void addTask();
 };
 #endif // GESTIONNAIREDETACHES_H

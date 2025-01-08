@@ -9,6 +9,10 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    addtaskdialog.cpp \
+    calendarview.cpp \
+    connexionwindow.cpp \
+    deletetaskcontroller.cpp \
     main.cpp \
     gestionnairedetaches.cpp \
     task.cpp \
@@ -16,6 +20,10 @@ SOURCES += \
     taskview.cpp
 
 HEADERS += \
+    addtaskdialog.h \
+    calendarview.h \
+    connexionwindow.h \
+    deletetaskcontroller.h \
     gestionnairedetaches.h \
     observers.h \
     task.h \
@@ -23,9 +31,12 @@ HEADERS += \
     taskview.h
 
 FORMS += \
+    connexionwindow.ui \
     gestionnairedetaches.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES +=

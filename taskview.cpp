@@ -10,7 +10,7 @@ void TaskView::updateModel(){
     QList<QString> listValues;
 
     for (Task* task : tasks) {
-        listValues.push_back(task->getName());
+        listValues.push_back(task->getText());
     }
 
     listWidget->clear();

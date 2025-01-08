@@ -11,6 +11,7 @@ public:
     TaskManager();
     void add(Task* task);
     void remove(QString name);
+    bool contains(QString name);
     QVector<Task*> getTasks();
 };
 

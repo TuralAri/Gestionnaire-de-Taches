@@ -2,6 +2,7 @@
 #define TASK_H
 #include "qdatetime.h"
 #include <QString>
+#include <QLocale>
 
 class Task{
 private:
@@ -9,6 +10,7 @@ private:
     QString description;
     QDateTime dateStart;
     QDateTime dateEnd;
+    QLocale *locale;
 
 public:
     Task(const QString &name, const QString &description, const QDateTime &dateStart, const QDateTime &dateEnd);
@@ -16,6 +18,7 @@ public:
     QString getDescription() const;
     QDateTime getDateStart() const;
     QDateTime getDateEnd() const;
+    QString getText() const;
 };
 
 #endif // TASK_H
