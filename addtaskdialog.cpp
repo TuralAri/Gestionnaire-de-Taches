@@ -44,6 +44,24 @@ AddTaskDialog::AddTaskDialog(QWidget *parent) : QDialog(parent){
     connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
     mainLayout->addWidget(buttonBox);
+}
 
+QString AddTaskDialog::getName()
+{
+    return nameEdit->text();
+}
 
+QString AddTaskDialog::getDesc()
+{
+    return descriptionEdit->toPlainText();
+}
+
+QDateTime AddTaskDialog::getDateDebut()
+{
+    return dateDebutEdit->dateTime();
+}
+
+QDateTime AddTaskDialog::getDateFin()
+{
+    return dateFinEdit->dateTime();
 }

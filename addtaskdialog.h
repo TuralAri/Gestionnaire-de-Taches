@@ -17,6 +17,10 @@ class AddTaskDialog : public QDialog
     Q_OBJECT
 public:
     explicit AddTaskDialog(QWidget *parent = nullptr);
+    QString getName();
+    QString getDesc();
+    QDateTime getDateDebut();
+    QDateTime getDateFin();
 private:
     QLineEdit *nameEdit;
     QTextEdit *descriptionEdit;

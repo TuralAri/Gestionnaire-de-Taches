@@ -1,6 +1,7 @@
 #include "gestionnairedetaches.h"
 #include "ui_gestionnairedetaches.h"
 #include "addtaskdialog.h"
+#include "addtaskcontroller.h"
 
 GestionnaireDeTaches::GestionnaireDeTaches(QWidget *parent)
     : QMainWindow(parent)
@@ -32,7 +33,11 @@ void GestionnaireDeTaches::removeTask(){
 void GestionnaireDeTaches::addTask(){
     AddTaskDialog dialog;
     if(dialog.exec() == QDialog::Accepted){
-
+        QString name = dialog.getName();
+        QString desc = dialog.getDesc();
+        QDateTime dateDebut = dialog.getDateDebut();
+        QDateTime dateFin = dialog.getDateFin();
+        addTaskController(taskManager).control(name,desc,dateDebut,dateFin);
     }
 }
 
