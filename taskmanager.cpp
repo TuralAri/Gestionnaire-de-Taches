@@ -13,9 +13,9 @@ void TaskManager::add(Task *task){
     notifyObserver();
 }
 
-void TaskManager::remove(QString name){
+void TaskManager::remove(int id){
     for(int i=0;i<tasks.size();++i){
-        if(tasks[i]->getName() == name){
+        if(tasks[i]->getId() == id){
             delete tasks[i];
             tasks.remove(i);
             break;
@@ -24,13 +24,31 @@ void TaskManager::remove(QString name){
     notifyObserver();
 }
 
-bool TaskManager::contains(QString name){
+void TaskManager::modify(int id, QString name, QString description, QDateTime dateDebut, QDateTime dateFin){
+    Task* tache = getTask(id);
+    tache->setName(name);
+    tache->setDescription(description);
+    tache->setDateStart(dateDebut);
+    tache->setDateEnd(dateFin);
+    notifyObserver();
+}
+
+bool TaskManager::contains(int id){
     for(int i=0;i<tasks.size();++i){
-        if(tasks[i]->getName() == name){
+        if(tasks[i]->getId() == id){
             return true;
         }
     }
     return false;
+}
+
+Task *TaskManager::getTask(int id){
+    for(int i=0;i<tasks.size();++i){
+        if(tasks[i]->getId() == id){
+            return tasks[i];
+        }
+    }
+    return nullptr;
 }
 
 QVector<Task *> TaskManager::getTasks(){

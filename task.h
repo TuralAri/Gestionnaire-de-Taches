@@ -6,6 +6,8 @@
 
 class Task{
 private:
+    static int current_id;
+    int id;
     QString name;
     QString description;
     QDateTime dateStart;
@@ -19,6 +21,11 @@ public:
     QDateTime getDateStart() const;
     QDateTime getDateEnd() const;
     QString getText() const;
+    int getId() const;
+    void setName(const QString &newName);
+    void setDescription(const QString &newDescription);
+    void setDateStart(const QDateTime &newDateStart);
+    void setDateEnd(const QDateTime &newDateEnd);
 };
 
 #endif // TASK_H

@@ -10,8 +10,10 @@ private:
 public:
     TaskManager();
     void add(Task* task);
-    void remove(QString name);
-    bool contains(QString name);
+    void remove(int id);
+    void modify(int id, QString name, QString description, QDateTime dateDebut, QDateTime dateFin);
+    bool contains(int id);
+    Task* getTask(int id);
     QVector<Task*> getTasks();
 };
 

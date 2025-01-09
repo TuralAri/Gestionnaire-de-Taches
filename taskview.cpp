@@ -5,14 +5,14 @@ TaskView::TaskView(TaskManager *taskManager, QListWidget *listWidget) : taskMana
     this->updateModel();
 }
 
-void TaskView::updateModel(){
+void TaskView::updateModel() {
     QVector<Task*> tasks = taskManager->getTasks();
-    QList<QString> listValues;
+    listWidget->clear();
 
     for (Task* task : tasks) {
-        listValues.push_back(task->getText());
+        QListWidgetItem* item = new QListWidgetItem(task->getText(), listWidget);
+        item->setData(Qt::UserRole, task->getId());
+        listWidget->addItem(item);
     }
-
-    listWidget->clear();
-    listWidget->addItems(listValues);
 }
+
