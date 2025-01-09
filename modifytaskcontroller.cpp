@@ -1,14 +1,13 @@
-#include "addtaskcontroller.h"
+#include "modifytaskcontroller.h"
 #include "QMessageBox"
 
-addTaskController::addTaskController(TaskManager *taskManager) : taskManager(taskManager){
+ModifyTaskController::ModifyTaskController(TaskManager *taskManager) : taskManager(taskManager){
 
 }
 
-void addTaskController::control(QString name, QString description, QDateTime dateDebut, QDateTime dateFin){
+void ModifyTaskController::control(int id, QString name, QString description, QDateTime dateDebut, QDateTime dateFin){
     if(name.isEmpty() == false && description.isEmpty() == false && dateDebut.isValid() && dateFin.isValid() && dateDebut <= dateFin){
-        Task* task = new Task(name,description,dateDebut,dateFin);
-        taskManager->add(task);
+        taskManager->modify(id, name, description, dateDebut, dateFin);
     }
     else{
         if(name.isEmpty()){

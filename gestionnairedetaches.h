@@ -30,5 +30,6 @@ private:
     DeleteTaskController* deleteTaskController;
     void removeTask();
     void addTask();
+    void modifyTask();
 };
 #endif // GESTIONNAIREDETACHES_H

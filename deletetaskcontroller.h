@@ -8,7 +8,7 @@ private:
     TaskManager* taskManager;
 public:
     DeleteTaskController(TaskManager* taskManager);
-    void control(QString name);
+    void control(int id);
 };
 
 #endif // DELETETASKCONTROLLER_H

@@ -16,6 +16,8 @@ SOURCES += \
     deletetaskcontroller.cpp \
     main.cpp \
     gestionnairedetaches.cpp \
+    modifytaskcontroller.cpp \
+    modifytaskdialog.cpp \
     task.cpp \
     taskmanager.cpp \
     taskview.cpp
@@ -27,6 +29,8 @@ HEADERS += \
     connexionwindow.h \
     deletetaskcontroller.h \
     gestionnairedetaches.h \
+    modifytaskcontroller.h \
+    modifytaskdialog.h \
     observers.h \
     task.h \
     taskmanager.h \

@@ -3,8 +3,8 @@
 DeleteTaskController::DeleteTaskController(TaskManager *taskManager) : taskManager(taskManager) {
 }
 
-void DeleteTaskController::control(QString name){
-    if(taskManager->contains(name)){
-        taskManager->remove(name);
+void DeleteTaskController::control(int id){
+    if(taskManager->contains(id)){
+        taskManager->remove(id);
     }
 }
